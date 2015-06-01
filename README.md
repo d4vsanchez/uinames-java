@@ -4,7 +4,7 @@ This is a library to generate random localized names consuming the API of [uinam
 
 ## Installation
 
-Just download the [JAR file]() and import it to your project.
+Download the [JAR file](https://github.com/juanda95/uinames-java/releases/download/1.0.0/uiname.jar) and its dependencies (see below) and import them to your project.
 
 ## Dependencies
 
@@ -43,7 +43,8 @@ Then, you can use the **generateNames()** method, it will ask you to implement t
 uiName.generateNames(new UINameResponse() {
     @Override
     public void onNamesReceived(Person[] people) {
-		// The parameter people have all the generated people names in their corresponding class.
+		// The parameter people have all the generated people names in their 
+		// corresponding class.
         for (Person person : people) {
         	System.out.println("Name: " + p.getName() + 
                 "\nSurname: " + p.getSurname() +
