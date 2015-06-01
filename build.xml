@@ -21,8 +21,6 @@
 
     <target name="jar" depends="compile">
         <mkdir dir="build/jar" />
-        <jar destfile="build/jar/uiname.jar" basedir="build/classes">
-            <zipgroupfileset dir="lib" includes="*.jar" />
-        </jar>
+        <jar destfile="build/jar/uiname.jar" basedir="build/classes" />
     </target>
 </project>
