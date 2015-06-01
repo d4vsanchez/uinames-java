@@ -1,0 +1,28 @@
+<project>
+    <path id="uiname.classpath">
+        <pathelement location="build/classes" />
+
+        <!-- the following jar's are used by the library -->
+        <pathelement location="lib/gson-2.3.1.jar" />
+        <pathelement location="lib/okhttp-2.4.0.jar" />
+        <pathelement location="lib/okio-1.4.0.jar" />
+    </path>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes">
+            <classpath refid="uiname.classpath" />
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar" />
+        <jar destfile="build/jar/uiname.jar" basedir="build/classes">
+            <zipgroupfileset dir="lib" includes="*.jar" />
+        </jar>
+    </target>
+</project>
